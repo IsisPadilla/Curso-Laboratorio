@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Población Región Metropolitana Chile</title>
+    <style>
+    /* Estilos generales */
+        .mapa path:hover{
+            filter: brightness(0.7); /*efecto hover*/
+            cursor: pointer; /*cambia el cursor cuando pasa por encima*/
+        } 
+    /* Estilos etiqueta*/
+    .etiqueta{
+            width: 150px; /*ancho etiqueta*/
+            height: 50px; /*alto etiqueta*/
+            border-radius: 30px; /*bordes redondeados*/
+            background-color: #fd7ae7; /*color de relleno*/
+            display: flex; 
+            position: absolute;
+            pointer-events: none; 
+            font-family: Arial, Helvetica, sans-serif; /*tipo de letra*/
+        }
+    /* Estilos etiqueta*/
+        .etiqueta p{
+            margin: auto; /*centra el texto*/
+            margin-left: 10px; /*margen izquierdo*/
+            font-size: 14px; /*tamaño de letra*/
+        }
+    </style>
+</head>
+<body>
+    <svg width="900" height="900"> <!--tamaño del mapa-->
+        <g class="mapa"></g> <!--grupo donde se dibuja el mapa--> 
+    </svg>
+    <script src="./script.js" type="module"></script> <!-- Enlaza el Script -->
+</body>
+</html>
